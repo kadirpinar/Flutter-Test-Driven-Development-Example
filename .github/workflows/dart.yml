@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Dart
+name: CI
 
 on:
   push:
@@ -25,9 +25,9 @@ jobs:
       - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
 
       - name: Install Flutter
-      # You may pin to the exact commit or the version.
-      # uses: britannio/action-install-flutter@a486b7e3148e54a76390d849100b9dee819ff810
-      - uses: britannio/action-install-flutter@v1.1
+      - uses: sybosito/flutter-action@v1
+        with:
+            channel: "stable"
   
       - name: Install dependencies
         run: flutter pub get
